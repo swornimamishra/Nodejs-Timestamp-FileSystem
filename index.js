@@ -5,6 +5,9 @@ import path from 'path';
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+//base page of the website
+app.get('/',(req,res)=>res.status(200).send(`App is listening on port ${PORT}`))
+
 app.get('/', (req, res) => {
     try {
         // Format the current date and time, replacing colons with hyphens
